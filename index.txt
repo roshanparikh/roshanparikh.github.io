@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdfdfd;
+      color: #333;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .project {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      background-color: #fff;
+    }
+    .project h3 {
+      margin-top: 0;
+      color: #004080;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #f0f0f0;
+      margin-top: 4rem;
+    }
+    a {
+      color: #004080;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Your Name</h1>
+  <p>Developer • Designer • Problem Solver</p>
+</header>
+
+<section>
+  <h2>About Me</h2>
+  <p>Hello! I'm a developer passionate about creating beautiful and functional websites. I specialize in web development, data science, and building tools that make a difference.</p>
+</section>
+
+<section>
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>📊 Project One</h3>
+    <p>Description of your first project. What did you build? What technologies did you use?</p>
+    <p><a href="https://github.com/yourusername/project-one" target="_blank">View on GitHub</a></p>
+  </div>
+
+  <div class="project">
+    <h3>📸 Project Two</h3>
+    <p>Description of another project. Highlight what’s cool about it!</p>
+    <p><a href="https://yourprojectlink.com" target="_blank">Live Demo</a></p>
+  </div>
+
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>📧 your.email@example.com</p>
+  <p>🔗 <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> | <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Your Name</p>
+</footer>
+
+</body>
+</html>
