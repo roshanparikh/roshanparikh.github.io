@@ -5,6 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Roshan Parikh | Portfolio</title>
   <style>
+    #typed-text {
+      font-size: 1.2rem;
+      height: 1.5rem; /* ensures height stays consistent */
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .cursor {
+      display: inline-block;
+      animation: blink 0.7s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
     body {
       margin: 0;
       font-family: 'Big Caslon', serif;
@@ -19,9 +35,11 @@
     }
     header h1 {
       margin: 0;
+      margin-bottom: 0.25rem;
       font-size: 2.5rem;
     }
     header p {
+      margin: 0;
       font-size: 1.2rem;
     }
     section {
@@ -35,11 +53,17 @@
       margin-bottom: 1.5rem;
       border-radius: 10px;
       background-color: #fff;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .project:hover {
+      transform: scale(1.01);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
     .project h3 {
       margin-top: 0;
       color: #004080;
     }
+    
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -56,15 +80,15 @@
 
 <header>
   <h1>Roshan Parikh</h1>
-  <p>Artificial Intelligence • Medicine</p>
+  <p id="typed-text"><span id="text"></span><span class="cursor">|</span></p>
 </header>
 
 <section>
   <h2>About Me</h2>
   <p>Hello! I'm a current medical student at the Icahn School of Medicine at Mount Sinai, and I'm passionate about AI applications in medicine. 
     I previously obtained my ScM in Data Science ('25) and my ScB in Applied Mathematics & Biology ('24) from Brown University. I conducted my 
-    undergraduate honors thesis through the <a href="https://sites.brown.edu/badrelab/" target="_blank">Badre Lab</a>, where I used machine learning
-    to analyze fMRI scans. I also conducted public health research through the <a href = "https://publichealth.nyu.edu/south-asian-health-awareness-sahar-club" target="_blank">SAHAR Group</a> 
+    undergraduate honors thesis through the <a href="https://sites.brown.edu/badrelab/" target="_blank"><b>Badre Lab</b></a>, where I used machine learning
+    to analyze fMRI scans. I also conducted public health research through the <a href = "https://publichealth.nyu.edu/south-asian-health-awareness-sahar-club" target="_blank"><b>SAHAR Group</b></a> 
     at NYU, exploring health and nutrition habits among Asian Americans.
 </section>
 
@@ -116,7 +140,7 @@
   </div>
 
   <div class="project">
-    <h3>🧠 Neural Connectivity as a Tool for Decoding Analysis/h3>
+    <h3>🧠 Neural Connectivity as a Tool for Decoding Analysis</h3>
     <p>Description of another project. Highlight what’s cool about it!</p>
     <p><a href="https://yourprojectlink.com" target="_blank">Live Demo</a></p>
   </div>
@@ -132,6 +156,46 @@
 <footer>
   <p>&copy; 2025 Roshan Parikh</p>
 </footer>
+
+<script>
+  const phrases = [
+    "Artificial Intelligence",
+    "Medicine",
+    "Data Science",
+    "Public Health",
+    "Health Informatics",
+    "Languages"
+  ];
+
+  const textElement = document.getElementById("text");
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 80;
+
+  function type() {
+    const currentPhrase = phrases[phraseIndex];
+    const displayedText = currentPhrase.substring(0, charIndex);
+
+    textElement.textContent = displayedText;
+
+    if (!isDeleting && charIndex < currentPhrase.length) {
+      charIndex++;
+      setTimeout(type, typingSpeed);
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      setTimeout(type, typingSpeed / 2);
+    } else {
+      isDeleting = !isDeleting;
+      if (!isDeleting) {
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+      }
+      setTimeout(type, 1000);
+    }
+  }
+
+  type();
+</script>
 
 </body>
 </html>
