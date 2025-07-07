@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Roshan Parikh | Portfolio</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+
     #typed-text {
       font-size: 1.2rem;
       height: 1.5rem; /* ensures height stays consistent */
@@ -23,9 +25,17 @@
     }
     body {
       margin: 0;
-      font-family: 'Big Caslon', serif;
+      font-family: 'Work Sans', sans-serif;
       background: #e6f7f4;
       color: #333;
+    }
+
+    strong, b {
+      font-weight: 500;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 500;
     }
     header {
       background-color: #0f7b83;
@@ -37,6 +47,7 @@
       margin: 0;
       margin-bottom: 0.25rem;
       font-size: 2.5rem;
+      font-weight: 500;
     }
     header p {
       margin: 0;
@@ -50,6 +61,7 @@
     .project {
       border: 1px solid #ccc;
       padding: 1rem;
+      padding-bottom: 0rem;
       margin-bottom: 1.5rem;
       border-radius: 10px;
       background-color: #fff;
@@ -61,7 +73,23 @@
     }
     .project h3 {
       margin-top: 0;
-      color: #004080;
+      color: #333;
+    }
+
+    .hashtags span {
+      display: inline-block;
+      background-color: #c6fbf1;
+      color: #0f7b83;
+      padding: 0.2rem 0.5rem;
+      margin: 0.2rem;
+      border-radius: 12px;
+      font-size: 0.85rem;
+    }
+
+    .authors {
+      font-style: italic;
+      color: #0f7b83;
+      margin-top: -1rem;
     }
     
     footer {
@@ -97,53 +125,90 @@
 
   <div class="project">
     <h3>🥦 A Multi-Stage Dyadic Qualitative Analysis to Disentangle How Dietary Behaviors of Asian American Young Adults are Influenced by Family</h3>
-    <p>Description of your first project. What did you build? What technologies did you use?</p>
-    <p><a href="https://github.com/yourusername/project-one" target="_blank">View on GitHub</a></p>
+    <p class = "authors">Shahmir H. Ali, Julia Cai, Fatema Kamal, Sian Auer, Katherine Yang, <strong>Roshan S. Parikh</strong>, Niyati Parekh, Nadia S. 
+      Islam, Alxis A. Merdjanoff, Ralph J. DiCLemente</p>
+    <p>Research exploring how familial relationships impact healthful behaviours among Asian American young adults.</p>
+    <p><a href="https://pubmed.ncbi.nlm.nih.gov/38193280/" target="_blank">Link to Manuscript</a></p>
+    <p class="hashtags">
+     <span>#QualitativeResearch</span> 
+     <span>#Nutrition</span>
+      <span>#FamilyRelationships</span>
+      <span>#AsianAmericanHealth</span>
+    </p>
   </div>
 
   <div class="project">
     <h3>📱 Social Media Utilization Within Asian American Families and Its Role in Healthy Lifestyle Behavioral Influence: Results From a Nationwide Survey</h3>
-    <p>Description of your first project. What did you build? What technologies did you use?</p>
-    <p><a href="https://github.com/yourusername/project-one" target="_blank">View on GitHub</a></p>
+    <p class="authors"> Farhan H. Mohsin, Shahmir H. Ali, Stella K. Chong, <strong>Roshan S. Parikh</strong>
+    Ralph J. DiClemente, Lu Hu</p>
+    <p>Research discussing patterns of social media use amoung Asian American young adults and how these patterns affect lifestyle behaviours.</p>
+    <p><a href="https://journals.sagepub.com/doi/full/10.1177/20563051231196544" target="_blank">Link to Manuscript</a></p>
+    <p class="hashtags">
+     <span>#SocialMedia</span> 
+      <span>#Nutrition</span> 
+      <span>#FamilyRelationships</span>
+      <span>#AsianAmericanHealth</span>
+    </p>
   </div>
-</section>
-
-<section>
-  <h2>Presentations</h2>
 </section>
 
 <section>
   <h2>Projects</h2>
 
   <div class="project">
-    <h3>📈 Machine Learning for Pediatric Obesity</h3>
-    <p>Description of your first project. What did you build? What technologies did you use?</p>
-    <p><a href="https://github.com/yourusername/project-one" target="_blank">View on GitHub</a></p>
+    <h3>📈 Machine Learning for Pediatric Obesity (in progress)</h3>
+    <p>Developed multiple machine learning models to assess how obesity manifests for children born with varying birth sizes for their gestational age.</p>
+    <p><a href = "https://github.com/roshanparikh/MLForPediatricObesity.git" target="_blank">View on GitHub</a></p>
+    <p class="hashtags">
+     <span>#MachineLearning</span> 
+      <span>#PublicHealth</span> 
+      <span>#Pediatrics</span>
+    </p>
   </div>
 
   <div class="project">
     <h3>🌱 Plant Disease Detection with Convolutional Autoencoder</h3>
-    <p>Description of another project. Highlight what’s cool about it!</p>
-    <p><a href="https://yourprojectlink.com" target="_blank">Live Demo</a></p>
+    <p>Created a deep learning architecture to diagnose plant diseases and determine plant species based on images of diseased leaves with a 
+      convolutional auto-encoder.</p>
+    <p><a href="https://github.com/rio-wombacher/plants_plants_plants.git" target="_blank">View on GitHub</a></p>
+    <p class="hashtags">
+     <span>#DeepLearning</span> 
+      <span>#CAE</span> 
+      <span>#ImageProcessing</span>
+    </p>
   </div>
 
   <div class="project">
     <h3>🫀 Implementing Gaussian Naive Bayes to Coronary Heart Disease</h3>
-    <p>Description of another project. Highlight what’s cool about it!</p>
-    <p><a href="https://yourprojectlink.com" target="_blank">Live Demo</a></p>
+    <p>Built a naive Gaussian Bayes algorithm from scratch and implemented it to predict coronary heart disease.</p>
+    <p><a href="https://github.com/roshanparikh/GNBforCoronaryHeartDisease.git" target="_blank">View on GitHub</a></p>
+    <p class="hashtags">
+     <span>#MachineLearning</span> 
+      <span>#Cardiology</span> 
+    </p>
   </div>
 
   <div class="project">
     <h3>🏥 Predicting Complications for Myocardial Infarction Patients</h3>
-    <p>Description of another project. Highlight what’s cool about it!</p>
-    <p><a href="https://yourprojectlink.com" target="_blank">Live Demo</a></p>
+    <p>Implemented a machine learning pipeline with multiple models to predict pulmonary edema and relapse after a myocardial infarction!</p>
+    <p><a href="https://github.com/roshanparikh/HeartAttackComplications.git" target="_blank">View on GitHub</a></p>
+    <p class="hashtags">
+     <span>#MachineLearning</span> 
+      <span>#Cardiology/span> 
+    </p>
   </div>
 
   <div class="project">
     <h3>🧠 Neural Connectivity as a Tool for Decoding Analysis</h3>
-    <p>Description of another project. Highlight what’s cool about it!</p>
-    <p><a href="https://yourprojectlink.com" target="_blank">Live Demo</a></p>
-  </div>
+    <em><p>Honors thesis for the Sc.B. in Applied Mathematics & Biology at Brown University</p></em>
+    <p>Studied cognitive control and interaction networks within the brain using fMRI data. Implemented a support vector classifier
+      over fMRI data to determine if meaningful decoding can occur with connectivity patterns.</p>
+    <p class="hashtags">
+     <span>#ComputationalNeuroscience</span> 
+      <span>#fMRI</span> 
+      <span>#CognitiveControl</span>
+    </p>
+    </div>
 
 </section>
 
